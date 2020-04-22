@@ -1,9 +1,8 @@
-
+var str = prompt("Please enter your message", "Here!").toLocaleLowerCase();
 var Frequency = (function () {
   function Frequency() {
   }
   Frequency.main = function (args) {
-      var str = prompt("Please enter your message", "Here!");
       var freq = (function (s) { var a = []; while (s-- > 0)
           a.push(0); return a; })(str.length);
       var i;
@@ -37,3 +36,12 @@ var Frequency = (function () {
 }());
 Frequency["__class"] = "Frequency";
 Frequency.main(null);
+
+function ChangeMsg(msg){
+    return msg.replace(/[a-zA-Z]/g, function(smsg){
+        return String.fromCharCode(smsg.charCodeAt[0]+1);
+
+    });
+
+}
+console.log(ChangeMsg(str));

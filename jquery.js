@@ -44,4 +44,6 @@ function ChangeMsg(msg){
     });
 
 }
-console.log(ChangeMsg(str));
+console.info(ChangeMsg(str));
+
+

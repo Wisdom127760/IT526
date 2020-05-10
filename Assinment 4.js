@@ -23,8 +23,6 @@ function findPrime($input) {
 		}else
 	  
 	  return true;
-
-	  
 	}
 	var $count = 0;
 	$count++;

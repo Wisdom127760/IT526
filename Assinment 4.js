@@ -1,30 +1,26 @@
-function findPrime($input) {
-	
-	function isPrime($x) {
-	 
-	  var $temp = new Array($x);
-  
-	  for (var $i = 2; $i < $x; $i++) {
+function Mtd1_findPrime(num) {
+	var count = 0;
+	var primenumz = [];
+	var limit = Math.sqrt(num);
+	for(var a = 2; a < value; a++) {
+		primenumz[a] = true;
 		
-		if ($x % $i == 0) {
-		
-		  $temp[$i] = false;
-		} else {
-		  
-		  $temp[$i] = true;
-		}
-	  }
-  
-	  for (var $y = 2; $y < $x; $y++) {
-		
-		if ($temp[$y] == false) {
-		  
-		  return false;
-		}else
-	  
-	  return true;
+    }
+	for(var b = 2; b < limit; b++) {
+        if(primenumz[b] === true) {
+			count++;
+            for(var c = b * b; c < num; c += b) {
+                primenumz[c] = false;
+            }
+        }
 	}
-	var $count = 0;
-	$count++;
-  }
+	
+	for(var i = 2; i < num; i++) {
+        if(primenumz[i] === true) {
+			console.log(i + " " + primenumz[i]);
+			
+        }
+    }
+	console.log("Total: " + count);
 }
+

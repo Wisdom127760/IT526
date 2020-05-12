@@ -50,3 +50,20 @@ function getPower(a,b,p) {
 	 else return (((x*x)%p)*a)%p;
 	}
 }
+//Checking Composite & Prime by using Fermat's test
+function fermatTesting(Num) { 
+        var a = getRandomNum(2,Num-1);
+        if (getGCD(a,Num) !== 1) {
+            return "COMPOSITE";
+        }
+        else {
+            if (getPower(a,Num-1,Num) !== 1) {
+                return "COMPOSITE";
+            }
+            else {
+                return "PRIME"; 
+            }
+        }
+	}
+var n = prompt("What is your number?");
+console.log(fermatTesting(n));

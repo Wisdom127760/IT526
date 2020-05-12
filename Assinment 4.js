@@ -29,3 +29,13 @@ function getRandomNum(min,max) {
 	max = Math.ceil(max);
 	return Math.floor(Math.random()*(max-min))+min;
 }
+//get the greatest common divisor
+function getGCD(a,b) { 
+	var tmp;
+	while (b !== 0) {
+		tmp = b;
+		b = a%b;
+		a = tmp;
+	}
+	return a;
+}

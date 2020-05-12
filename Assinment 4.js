@@ -23,4 +23,9 @@ function Mtd1_findPrime(num) {
     }
 	console.log("Total: " + count);
 }
-
+//Using the fermat testing
+function getRandomNum(min,max) { 
+	min = Math.ceil(min);
+	max = Math.ceil(max);
+	return Math.floor(Math.random()*(max-min))+min;
+}

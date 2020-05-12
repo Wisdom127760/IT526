@@ -39,3 +39,14 @@ function getGCD(a,b) {
 	}
 	return a;
 }
+//getting the a^b mod p 
+function getPower(a,b,p) { 
+	if (b == 1)
+	 return a%p;
+	else {
+	 x = getPower(a,Math.floor(b/2),p);
+	 if (b%2 == 0) 
+	  return (x*x)%p;
+	 else return (((x*x)%p)*a)%p;
+	}
+}

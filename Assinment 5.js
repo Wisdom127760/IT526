@@ -15,4 +15,13 @@ var sieve_of_eratosthenes = function(num) {
             }
         }
     }
+    for (var i = 2; i < n; i++) {
+        if(array[i]) {
+            output.push(i);
+        }
+    }
+
+    return output;
 }
+
+sieve_of_eratosthenes(350000);
